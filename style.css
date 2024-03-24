@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+body{
+    background-color: #fff;
+}
 #logo-container, #hover-logo{
     display: flex;
     width: 100%;
@@ -23,7 +26,6 @@
 }
 
 * {
-    background-color: #333333;
     margin: 0;
     box-sizing: border-box;
 }
@@ -52,9 +54,15 @@ ul li{
     list-style-type: none;
     margin-right: 30px;
     font-family: Montserrat;
-    width: 85px;
+    width: auto;
     height: 25px;
+    transition: box-shadow 0.4s ease;
 }
 ul li span{
     background-color: #f2f2f2;
+}
+li:hover {
+    cursor: pointer;
+    transform: scale(1.07);
+    color: #9f0fb6;
 }
