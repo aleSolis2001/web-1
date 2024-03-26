@@ -29,37 +29,41 @@ body{
     margin: 0;
     box-sizing: border-box;
 }
-#navbar{
-    margin-top: 6px;
-}
+
 nav{
     display: flex;
     justify-content:flex-start;
     align-items: center;
     width:100%;
     height: 40px;
-    background-color: #f2f2f2;
+    background-color: #fff;
+}
+#navbar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 ul{
     display:flex;
     width: 95%;
     align-items:center;
-    background-color: #f2f2f2;
+    background-color: #fff;
 }
 ul li{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f2f2f2;
+    background-color: #fff;
     list-style-type: none;
     margin-right: 30px;
     font-family: Montserrat;
     width: auto;
     height: 25px;
-    transition: box-shadow 0.4s ease;
+    transition: transform 0.4s ease;
 }
 ul li span{
-    background-color: #f2f2f2;
+    background-color: #fff;
+    margin-right: 2px;
 }
 li:hover {
     cursor: pointer;
@@ -71,34 +75,45 @@ li:hover {
     padding: 10px;
     padding-top: 0;
     display: flex;
-    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+}
+h3{
+    align-self: flex-start;
+    font-family: Montserrat;
+    margin: 5px;
+    font-size: 20px;
 }
 .products{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     flex-wrap: wrap;
 }
 .producto{
-    width: 320px;
+    width: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 370px;
+    height: 300px;
     margin: 10px;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #ccc;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 2px #d00ea9;
+    transition: transform 0.4s ease-in;
 }
 .producto-img{
-    width: 300px;
+    width: 220px;
 }
 .producto-nombre{
-    color: #9f0fb6;
     margin-bottom: 5px;
 }
 .producto-precio{
     color: #2ecc71;
+}
+.producto:hover{
+    transform: scale(1.05);
 }

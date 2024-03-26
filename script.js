@@ -33,27 +33,27 @@ const phones =   [
     {   id: "43521",
         name: "Xioami Note 13 pro 256GB - Negro",
         price: "2.044.000 PYG",
-        img: "//f.fcdn.app/imgs/fa5f82/www.bristol.com.py/brispy/458e/webp/catalogo/123000_BS13577_1/1920-1200/celular-xiaomi-note-13-pro-256gb-negro.jpg"
+        img: "https://f.fcdn.app/imgs/fa5f82/www.bristol.com.py/brispy/458e/webp/catalogo/123000_BS13577_1/1920-1200/celular-xiaomi-note-13-pro-256gb-negro.jpg"
     },
     {   id: "90134",
         name: "Oppo A38 128GB - Negro",
         price: "1.094.000 PYG",
-        img: "//f.fcdn.app/imgs/945d92/www.bristol.com.py/brispy/ce6f/webp/catalogo/PB1356263_BS13562_1/1920-1200/celular-oppo-a38-128gb-negro.jpg"
+        img: "https://f.fcdn.app/imgs/945d92/www.bristol.com.py/brispy/ce6f/webp/catalogo/PB1356263_BS13562_1/1920-1200/celular-oppo-a38-128gb-negro.jpg"
     },
     {   id: "41842",
         name: "Samsung S24 128GB 6,2 - Gris",
         price: "6.990.000 PYG",
-        img: "//f.fcdn.app/imgs/401d2e/www.bristol.com.py/brispy/a197/webp/catalogo/PB135888990_BS13588_1/1920-1200/celular-samsung-s24-128gb-6-2-negro.jpg"  
+        img: "https://f.fcdn.app/imgs/401d2e/www.bristol.com.py/brispy/a197/webp/catalogo/PB135888990_BS13588_1/1920-1200/celular-samsung-s24-128gb-6-2-negro.jpg"  
     }
 ]
 
 
 
 const notebooksContainer = document.getElementById("notebooks")
-for (compu of laptops){
+for (item of laptops){
     let divProducto = document.createElement("div");
     divProducto.classList.add("producto");
-    divProducto.id = compu.id
+    divProducto.id = item.id
 
     let img = document.createElement("img");
     img.classList.add("producto-img")
@@ -64,10 +64,10 @@ for (compu of laptops){
     let nombre = document.createElement("p");
     nombre.classList.add("producto-nombre")
     
-    nombre.innerHTML = compu.name;
-    img.src = compu.img;
+    nombre.innerHTML = item.name;
+    img.src = item.img;
     img.alt = "Producto";
-    precio.innerHTML = compu.price;
+    precio.innerHTML = item.price;
 
     divProducto.appendChild(img);
     divProducto.appendChild(nombre);
@@ -76,3 +76,32 @@ for (compu of laptops){
     notebooksContainer.appendChild(divProducto)
 
 }
+const phonesContainer = document.getElementById("phones")
+for (item of phones){
+    let divProducto = document.createElement("div");
+    divProducto.classList.add("producto");
+    divProducto.id = item.id
+
+    let img = document.createElement("img");
+    img.classList.add("producto-img")
+
+    let precio = document.createElement("p");
+    precio.classList.add("producto-precio");
+
+    let nombre = document.createElement("p");
+    nombre.classList.add("producto-nombre")
+    
+    nombre.innerHTML = item.name;
+    img.src = item.img;
+    img.alt = "Producto";
+    precio.innerHTML = item.price;
+
+    divProducto.appendChild(img);
+    divProducto.appendChild(nombre);
+    divProducto.appendChild(precio);
+    
+    phonesContainer.appendChild(divProducto)
+}
+document.getElementById('home').addEventListener('click', function() {
+    document.getElementById('logo-container').scrollIntoView({ behavior: 'smooth' });
+});
