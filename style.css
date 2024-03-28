@@ -79,41 +79,107 @@ li:hover {
     flex-direction: column;
     width: 80%;
 }
-h3{
+#maybe{
     align-self: flex-start;
     font-family: Montserrat;
-    margin: 5px;
+    margin: 10px;
     font-size: 20px;
+}
+.articles-box{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    margin-bottom: 20px;
 }
 .products{
     display: flex;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    flex-wrap: wrap;
+    overflow-x: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    margin-bottom: 20px;
 }
-.producto{
-    width: 250px;
-    display: flex;
+.producto {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    height: 330px;
+    max-width: 33.3%;
+    flex: 0 0 33.33%;
+    text-align: center;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 300px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0px 1px 2px #d00ea9;
-    transition: transform 0.4s ease-in;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
-.producto-img{
-    width: 220px;
+.producto:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
 }
-.producto-nombre{
-    margin-bottom: 5px;
+
+.producto img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
 }
-.producto-precio{
-    color: #2ecc71;
+
+.producto-nombre {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Añade puntos suspensivos (...) al final del texto si se desborda */
+    white-space: nowrap;
 }
-.producto:hover{
-    transform: scale(1.05);
+.producto-precio {
+    color: #009688;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.buy-buttom {
+    background-color: #c101df;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-buttom:hover {
+    background-color: #9f0fb6;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    display: block;
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0%;
+}
+
+.l-btn {
+    left: 0;
+}
+
+.r-btn {
+    right: 0;
 }
