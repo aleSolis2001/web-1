@@ -22,14 +22,22 @@
     </div>
     <section id="navbar">
         <nav>
-            <ul>
-                <li id="home"><span class="material-symbols-outlined">home
+            <ul id="nav-ul">
+                <li class="nav-option" id="home"><span class="material-symbols-outlined">home
                 </span>Inicio</li>
-                <li><span class="material-symbols-outlined">shopping_cart</span>
-                    Productos</li>
-                <li><span class="material-symbols-outlined">help</span>
+                <li id="li-dropdown" class="nav-option">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                    <span>Productos</span>
+                    <ul id="dropdown">
+                        <li class="dropdown-li"><a href="">Notebooks</a></li>
+                        <li class="dropdown-li"><a href="">Celulares</a></li>
+                        <li class="dropdown-li"><a href="">Monitores</a></li>
+                        <li class="dropdown-li"><a href="">Mouses</a></li>
+                    </ul>
+                </li>
+                <li class="nav-option"><span class="material-symbols-outlined">help</span>
                     Acerca de Nosotros</li>
-                <li id="instagram"><span class="material-symbols-outlined">
+                <li class="nav-option" id="instagram"><span class="material-symbols-outlined">
                     phone_in_talk
                 </span>Contactanos</li>
             </ul>
